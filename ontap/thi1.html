@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <form id="my-frm" onsubmit="return nhapsai()">
+      <h2>Hoa don</h2>
+      <label for="">khanh hang</label>
+      <input type="text" name="kh">
+      <p id="khE"></p>
+      <label for="">Email</label>
+      <input type="text" name="em">
+      <p id="emE"></p>
+      <label for="">sdt</label>
+      <input type="text" name="sdt">
+      <p id="sdtE"></p>
+      <select id="lh" name="lh" onchange="clh()" >
+        <option value="0">---Chọn---</option>
+        <option value="1">Loai 1</option>
+        <option value="2">Loai 2</option>
+        <option value="3">Loai 3</option>
+      </select>
+      
+      <p id="khE"></p>
+      <label for="">don gia</label>
+      <input type="text" name="dg" id="dg">
+      <p id="dgE"></p>
+      <label for="">so luong</label>
+      <input type="number" name="sl" id="sl">
+      <p id="slE"></p>
+      <label for="">Thanh tien</label>
+      <input type="text" name="tt" id="tt">
+      <p id="ttE"></p>
+      <input type="submit" value="Dat mua">
+      <script>
+        let dongia = document.getElementById("dg");
+        let soluong = document.getElementById("sl");
+        let p = document.getElementById("my-frm").elements
+        function clh(){
+            if(p.lh.value==1){
+                p.dg.value=50000;
+            }else if(p.lh.value==2){
+                p.dg.value = 300000;
+            }else{
+                p.dg.value = 1000000;
+            }
+            p.tt.value = dg.value * sl.value
+        }
+        function tt(){
+            document.getElementById("tt").value = Number(donggia.value)*Number(sl.value)
+        }
+        function nhapsai(){
+            let flag = true;
+            if(p.kh.value==""){
+                document.getElementById("khE").innerHTML = "Ban can nhap ten"
+            }else{document.getElementById("khE").innerHTML=""}
+            if(p.kh.value==""){
+                document.getElementById("emE").innerHTML = "Ban can nhap ten"
+            }else{document.getElementById("emE").innerHTML=""}
+            if(p.kh.value==""){
+                document.getElementById("sdtE").innerHTML = "Ban can nhap ten"
+            }else{document.getElementById("sdtE").innerHTML=""}
+            if(p.kh.value==""){
+                document.getElementById("lhE").innerHTML = "Ban can nhap ten"
+            }else{document.getElementById("lhE").innerHTML=""}
+            if(p.kh.value==""){
+                document.getElementById("dgE").innerHTML = "Ban can nhap ten"
+            }else{document.getElementById("dgE").innerHTML=""}
+            if(p.kh.value==""){
+                document.getElementById("slE").innerHTML = "Ban can nhap ten"
+            }else{document.getElementById("slE").innerHTML=""}
+            if(p.kh.value==""){
+                document.getElementById("ttE").innerHTML = "Ban can nhap ten"
+            }else{document.getElementById("ttE").innerHTML=""}
+            return  false;
+        }
+      </script>
+    </form>
+</body>
+
+</html>

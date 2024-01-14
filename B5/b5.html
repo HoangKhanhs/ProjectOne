@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <p>
+    <button onclick="_first()">First</button> <!--Truoc-->
+    <button onclick="_prev()">pre</button> <!--Tien-->
+    <button onclick="_next()">next</button> <!--lui-->
+    <button onclick="_last()">last</button><!--Sau-->
+    </p>
+    <img src="img/gs1-2.png" alt="">
+    <script>
+        var arrImg= ["gs1.png","gs2.png","gs1-2.png"];
+        var hinh = document.querySelector("img");
+        var int = 0;
+        function _first(){
+            ind = 0;
+            hinh.src = arrImg[ind];
+        }
+        function _last(){
+            ind = 2;
+            hinh.src = arrImg[ind];
+        }
+        function _next(){
+            ind ++;
+            if(ind>2) ind = 0;
+            hinh.src = arrImg[ind];
+        }
+        function _prev(){
+            ind --;
+            if(ind<0) ind=2;
+            hinh.src = arrImg[ind];
+            hinh.src = arrImg[ind];
+        }
+        var t = setInterval("next()",2000);
+        function _stop(){
+            clearInterval(t);
+        }
+        function _play(){
+            clearInterval(t);
+            t = setInterval("_next()",2000);
+        }
+        
+    </script>
+</body>
+</html>

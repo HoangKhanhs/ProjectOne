@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hoàng Trọng Khánh</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='asm1.css'>
+    <script src='asm1.js'></script>
+    <style>
+        .image{
+            margin: 10px;
+        }
+        .image img{
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!--------------------------menu----------------------------->
+    <div class="tong">
+        <div class="main-menu">
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Sản Phẩm</a></li>
+            <li><a href="">Liên Hệ</a></li>
+            <hr>
+        </div>
+        <!----------------------banner----------------------->
+        <div class="banner">
+            <img src="nen2.png" alt="">
+            <h1>Hoàng Trọng Khánh-PH33918</h1>
+        </div>
+        <!--------------------slineshow----------------------->
+          <div class="image">
+            <img id="img" onclick="changeImage()" src="banner1.png" alt="">
+          </div>
+              <script>
+                var index = 1;
+                changeImage = function(){
+                    var imgs = ["banner1.png","banner2.png","banner3.png"];
+                    document.getElementById('img').src = imgs[index];
+                     index++;
+                     if(index == 3){
+                        index = 0;
+                     }
+                  }
+                  setInterval(changeImage,2000);
+              </script>
+          <!------------------content-------------------------->
+          <tbody>
+            <tr>
+                <div class="content">
+                    <h1>Danh sách sản phẩm</h1>
+                    <div class="news">
+                        <div class="new1" id="sp1">
+                            <h2>Giá sách để bàn</h2>
+                            <img src="gs.png" alt="">
+                            <h3>5000đ</h3>
+                            <button onclick = "addProduct('sp1')">
+                                <h2>Thêm vào giỏ hàng</h2>
+                            </button>
+                        </div>
+                        <div class="new1" id="sp2">
+                            <h2>Bộ bút cho bé</h2>
+                            <img src="hb.png" alt="">
+                            <h3>10000đ</h3>
+                            <button onclick = "addProduct('sp2')">
+                                <h2>Thêm vào giỏ hàng</h2>
+                            </button>
+                        </div>
+                        <div class="new1" id="sp3">
+                            <h2>Bút tẩy 0.5mm</h2>
+                            <img src="bt.png" alt="">
+                            <h3>15000đ</h3>
+                            <button onclick = "addProduct('sp3')">
+                                <h2>Thêm vào giỏ hàng</h2>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </tr>
+            
+          </tbody>
+        
+        <!-----------------------cart----------------------->
+        <section class="cart">
+            <h2>Giỏ hàng</h2>
+            <form action="">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody id="addProduct">
+                       
+                    </tbody>
+                </table>
+                <div style="text-align: right;" class="price-total">
+                    <p style="font-weight: bold;">Tổng tiền:<span id="tong-tien">0</span><sup>đ</sup></p>
+                </div>
+            </form>
+        </section>
+           <!--------------------button------------------------->
+
+        <div class="navs">
+           
+            <button onclick = "thanhToan()">Thanh Toán</button>
+        </div>
+        <div class="footer">
+            <h2>Assigment Lập trình cơ sở với javascrip (WEB1043)</h2>
+        </div>
+    </div>
+    
+</body>
+
+</html>

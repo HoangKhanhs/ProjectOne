@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        body{ 
+            
+            text-align: center;
+            border: 1px solid blue;
+            max-width: 500px;
+            margin-left: 450px;
+        }
+    </style>
+</head>
+<body>
+    <form id="my-frm" onsubmit="return nhapsai()">
+        <h2>Hóa Đơn</h2><hr>
+        <label for="">Khách hàng</label>
+        <input type="text" name="kh"><br><br>
+        <p id="khError"></p>
+        <label for="">Email</label>
+        <input type="text" name="em"><br><br>
+        <p id="emError"></p>
+        <label for="">sdt</label>
+        <input type="text" name="sdt"><br><br>
+        <p id="sdtError"></p>
+        <label for="">Loại Hàng</label>
+        <select name="loaihang" id="loaihang" onchange="chonloaihang()">
+            <option value="0">---Chọn---</option>
+            <option value="1">Loại 1</option>
+            <option value="2">Loại 2</option>
+            <option value="3">Loại 3</option>
+        </select><br><br>
+        <p id="lhError"></p>
+        <label for="">Đơn Giá</label>
+        <input type="text" name="gia" id="dongia"><br><br>
+        <p id="dongiaError"></p>
+        <label for="">Số Lượng</label>
+        <input type="number" name="sl" id="sl" onchange="chonloaihang()"><br><br>
+        <p id="slError"></p>
+        <label for="">Thành Tiền</label>
+        <input type="text" name="tt" id="tt"><br><br>
+        <p id="thanhtienError"></p>
+        <input type="submit" value="Đặt Mua"><br><br>
+        <script>
+            let checkemail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i;
+            let checksdt=/((09|03|07|08|05)+([0-9]{8})\b)/g;
+            let dongia = document.getElementById("dong ia");
+            let soluong = document.getElementById("sl");
+            let p = document.getElementById("my-frm").elements
+            function chonloaihang(){
+                if(p.loaihang.value==1){
+                    p.gia.value=500000
+                }else if(p.loaihang.value==2){
+                    p.dongia.value=300000
+                }else{
+                    p.dongia.value=100000
+                }
+                p.tt.value = dongia.value * sl.value;
+            }
+            function tt(){
+                document.getElementById("tt").value= Number(dongia.value)*Number(sl.value);
+            }
+            function nhapsai(){
+                let flag = true;
+                if(p.kh.value==""){
+                    document.getElementById("khError").innerHTML="Bạn cần nhập tên";
+                }else{document.getElementById("khError").innerHTML=""}
+                if(p.em.value==""){
+                    document.getElementById("emError").innerHTML="Bạn cần nhập email";
+                }else if(!checkemail.test(p.em.value)){document.getElementById("emError").innerHTML="Bạn cần nhập đúng định dạng email"; }else{document.getElementById("emError").innerHTML="";}
+                if(p.sdt.value==""){
+                    document.getElementById("sdtError").innerHTML="Bạn cần nhập sdt";
+                }else if(!checksdt.test(p.sdt.value)){document.getElementById("sdtError").innerHTML="Bạn cần nhập đúng định dạng sdt";}else{getElementById("sdtError").innerHTML="";}
+                if(p.loaihang.value=="0"){
+                    document.getElementById("lhError").innerHTML="Bạn cần chọn loại hang";
+                }else{document.getElementById("lhError").innerHTML=""}
+                if(p.gia.value==""){
+                    document.getElementById("dongiaError").innerHTML="Bạn cần nhập đơn giá";
+                }else{document.getElementById("dongiaError").innerHTML=""}
+                if(p.sl.value==""){
+                    document.getElementById("slError").innerHTML="Bạn cần chọn số lượng";
+                }else{ document.getElementById("slError").innerHTML=""}
+                if(p.tt.value==""){
+                    document.getElementById("thanhtienError").innerHTML="Bạn cần nhập thành tiền";
+                }else{document.getElementById("thanhtienError").innerHTML=""}
+                
+
+                return false;
+
+            }
+        </script>
+    </form>
+</body>
+</html>

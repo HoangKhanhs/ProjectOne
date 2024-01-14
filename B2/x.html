@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+      // Nhập vào 1 mảng gồm n phần tử từ bàn phím
+      // Hiển thị mảng đã nhập ra màn hình trình duyệt
+          var n = Number(prompt("Nhap so luong phan tu mang"));
+          var a = [];
+          for(var i = 0; i<n;i++){
+          a[i] = prompt('Nhap phan tu thu $(i+1)');
+       }
+      //  Hiện mảng
+      for(var item of a){
+        document.write(item + "<br>");
+      }
+      // 
+      for(var i=1;i<=10;i++){
+        if(i<=4) document.write(i);
+        else break;
+      }
+    </script>
+</body>   
+</html>

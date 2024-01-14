@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <button onclick="mo()">Mo web</button>
+    <button onclick="dong()">dong web</button>
+    <button onclick="kt()">ktra web</button>
+    <script>
+         function mo(){
+            // mo cua so moi
+           cs = window.open("htpps://dantri.vn","Dan tri","height=300,width=300"); 
+         }
+         function dong(){
+            cs.close();
+         }
+         function kt(){
+            if(cs.closed==true) alert("cua so da dong");
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    
+</head>
+<body>
+    <label id="pro" data-price="1950">iphone 9</label>
+    <input id="qty" type="number" value="1"/>
+    <button onclick="display()">ok</button>
+    <hr>
+    <h3>Name: <span id="name"></span></h3>
+    <h3>Amount: <span id="amount"></span></h3>
+    <script>
+        function display(){
+            // truy cập vào lable lấy tt và giá của sp
+            var pro = document.getElementById("pro");
+            var name = pro.innerText;
+            var price = pro.getAttribute("data-price");
+            // truy cap ptu input de lấy tt ve sl
+            var quantity = document.getElementById("qty").value;
+            var amount = price*quantity;
+            document.getElementById("name").innerText = name;
+            document.getElementById("amount").innerText = amount;
+            console.log(price);
+        }
+    </script>
+</body>
+</html>

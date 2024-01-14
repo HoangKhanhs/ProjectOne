@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="abc">
+
+    </div>
+    <button>Hien thi H/A</button> <button>Xoa H/A</button>
+    <script>
+        var _parent = document.querySelector("#abc");
+        var newIMG = document.createElement("img");
+        var btn = document.querySelectorAll("button");
+        btn[0].onclick = function(){
+            _parent.appendChild(newIMG);
+            newIMG.scr = "img/banner1.png";
+        }
+        btn[1].onclick = function(){
+            _hinhanh.removeChild(newIMG);
+        }
+    </script>
+</body>
+</html>

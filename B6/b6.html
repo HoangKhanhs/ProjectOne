@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="abc">
+
+    </div>
+    <button>them the h1</button> <button>xoa the h1</button>
+    <script>
+        var _parent = document.querySelector("#abc");
+        // them alement node (dong)
+        var newH1 = document.createElement("h1");
+
+        var btn = document.querySelectorAll("button");
+        btn[0].onclick = function(){
+            _parent.appendChild(newH1);
+            newH1.innerHTML = "thanh cong";
+         // newH1.setAttribute("id","xyz");
+         //   var hihi = document.getElementById("xyz");
+         //   hihi.innerHTML = "hihihi";
+        }
+        btn[0].onclick = function(){
+            _parent.appendChild(newH1);
+        }
+        _parent.appendChild(newH1);
+    </script>
+</body>
+</html>

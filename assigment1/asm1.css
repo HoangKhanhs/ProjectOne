@@ -1,0 +1,155 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.tong{
+    width: 1280px;
+    margin: 0px auto;
+    text-align: center;
+}
+.menu{
+    position: absolute;
+    right: 20px;
+    margin: 20px 20px;
+}
+.banner{
+    background-size: 100% 100%;
+    height: 100%;
+    width: 1260px;
+    padding-top: 20px;
+}
+.banner img{
+    height: 250px;
+    width: 100%;
+    margin: 10px 10px;
+    background-image: linear-gradient(0,rgba(255,255,0,0.5), rgba(0,0,255,0,5));
+}
+.banner h1{
+      position: absolute;
+      top: 150px;
+      left: 850px;
+      color: #fff;
+      font-size: 30px;
+      
+}
+.main-menu{
+    position: absolute;
+    margin: 20px 20px;
+
+}
+.main-menu li{
+   display: inline-block;
+   padding-left: 100px;
+   padding-right: 100px;
+   text-align: center;
+}
+.main-menu li a{
+    color: white;
+    line-height: 72px;
+    text-decoration: none;
+    margin: 0px 15px;
+    font-variant: small-caps;
+    font-size: larger;
+    font-weight: 400;
+    padding-left: 60px;
+    padding-right: 50px;   
+}
+.main-menu li a:hover{
+    background-color: gray;
+}
+.content{
+    width: 100%;
+    height: 50% ;
+    background-color: aliceblue;
+}
+.content h1{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    padding: 20px 0px;
+}
+.news{
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+.new1{
+    width: 30%;
+    height: 80% ;
+    border: 1px solid gray;
+    padding: 30px;
+    margin: 0px 20px;
+}
+.new1 img{
+    width: 90%;
+    padding-top: 15px;
+}
+.new h2{
+    font-size: 16px;
+    line-height: 19px;
+    color: orangered;
+    font-weight: 700;
+    text-align: justify;
+    padding: 45px 0px;
+}
+.new1 button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    background: red;
+}
+.new1 button:hover{
+    background-color: #2d9cdb;
+}
+.nav{
+    margin: 50px 50px;
+}
+.navs h1{
+    padding-top: 50px;
+}
+.nav h2{
+    padding-left:20px ;
+    float: left;
+}
+.navs button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    background: red;
+    font-size: 150%;
+}
+.navs button:hover{
+    background-color: #2d9cdb ;
+}
+.cart{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.cart h2{
+    margin-bottom: 20px;
+}
+.cart table{
+    width: 100%;
+}
+.cart table thead tr th:first-child{
+    text-align: left;
+}
+.cart table tr td{
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+.footer{
+    height: 102px;
+    background: orangered;
+    margin:35px;
+}
+.footer h2{
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+}

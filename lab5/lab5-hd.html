@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h3>Danh muc hang hoa</h3>
+    <table border="1">
+        <tr>
+            <td>xiaomi 12</td>
+            <td>2000$</td>
+            <td><button onclick="them(this)">Them</button></td>
+        </tr>
+        <tr>
+            <td>xiaomi 12</td>
+            <td>2000$</td>
+            <td><button onclick="them(this)">Them</button></td>
+        </tr>
+        <tr>
+            <td>xiaomi 12</td>
+            <td>2000$</td>
+            <td><button onclick="them(this)">Them</button></td>
+        </tr>
+    </table>
+    <h3>Gio hang</h3>
+    <div id="not-empty">
+        <table border="1" id="cart"> </table>
+        <h3> Tong so tien: $ <span id="tong"> 0</span> </h3>
+    </div>
+    <script>
+        var cart = document.querySelector("#cart");
+        function them(btn) {
+            var row = btn.parenNode.parenNode.cloneNode(true);
+            var btnXoa = row.querySelector("button");
+            btnXoa.innerHTML = "Xóa";
+            btnXoa.setAttribute("onclick", "xoa(this)");
+            cart.appendChild(row);
+        }
+        function xoa(btn) {
+            var row = btn.parentNode.parentNode;
+            row.removeChild(row);
+        }
+
+    </script>
+</body>
+
+</html>

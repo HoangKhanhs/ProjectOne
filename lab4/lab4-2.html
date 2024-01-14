@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <button onclick="sv.hienThi();">
+        <h3>Hiển thị</h3>
+    </button>
+    <script>
+        var sv = new Object();
+        sv.hoTen = prompt("Ho va ten");
+        sv.diem = prompt("Nhap diem");
+
+        sv.hienThi = function () {
+            if (this.diem >= 5) {
+                this.hocLuc = "Đậu";
+            } else {
+                this.hocLuc = "Rớt";
+            }
+            document.write("<h3>Họ và tên: " + this.hoTen + "</h3>");
+            document.write("<h3>Điểm TB: " + this.diem + "</h3>");
+            document.write("<h3>Học lực: " + this.hocLuc + "</h3>");
+
+        }
+    </script>
+</body>
+
+</html>

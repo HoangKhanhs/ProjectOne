@@ -1,0 +1,31 @@
+.hover_image {
+    text-align: center;
+  }
+  .hover_image img {
+      width: 500px;
+      height: 300px;
+      border-radius: 10px;
+      object-fit: cover;
+  }
+  .wrapper_slider {
+      margin-top: 50px;
+      text-align: center;
+  }
+  img {
+      border-radius: 10px;
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+  }
+  .wrapper_btn {
+      text-align: center;
+      margin-top: 10px;
+  }
+  .wrapper_btn button {
+      margin: 0 10px;
+      padding: 10px 30px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+  }
+  

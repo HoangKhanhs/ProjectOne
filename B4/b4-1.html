@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+        var meotom = {
+            Ten: meotom,
+            canNang: 6,
+            thucAn: ["ca", "chout", "hat"],
+            maulong: mauvang,
+            batChuot: function () {
+                document.write("Bat chuot");
+            },
+            tiengkeu: function () {
+                document.write("Meo meo meo");
+
+            }
+        }
+        document.write("<br>Ten" + meotom.Ten);
+        document.write("<br>Cannang" + meotom.canNang);
+        for (const thucAn of meotom) {
+            document.write("<br>thucan"+meotom.thucAn);
+        }
+        document.write("<br>Maulong"+meotom.maulong);
+        document.write("batchuot"+meotom.batChuot);
+        document.write("tiengkeu"+meotom.tiengkeu);
+        
+
+    </script>
+</body>
+
+</html>

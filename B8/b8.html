@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <form name="frmDK" onsubmit="return validate()">
+        <p>
+            Họ Tên <input type="text" name="txtHoTen">
+        </p>
+        <p class="errHoTen" style="color: red;">
+
+        </p>
+        <p>
+            sđt <input type="text" name="txtSDT">
+        </p>
+        <p class="errSDT" style="color: red;">
+
+        </p>
+        <p>
+            email <input type="text" name="txtEmail">
+        </p>
+        <p class="errEmail" style="color: red;">
+
+        </p>
+        <button type="submit">Đăng kí</button> 
+    </form>
+    <script>
+        // họ tên và sdt ko đc rỗng
+        // sdt có đúng 10 ký tự số và bắt đầu bằng số 0
+        function validate() {
+            var check = true;
+            var hoTen = document.frmDK.txtHoTen.value;
+            var errHoTen = document.querySelector(".errHoTen");
+            var SDT = document.frmDK.txtSDT.value;
+            var errSDT = document.querySelector(".errSDT");
+            var email = document.frmDK.txtEmail.value;
+            var errEmail = document.querySelector(".errEmail");
+            // check họ tên
+            if (hoTen == "") {
+                errHoTen.innerHTML = "Họ tên không được rỗng"
+                check = false;
+            }
+            else errHoTen.innerHTML = "";
+            // check SDT
+            if (SDT == "") {
+                errSDT.innerHTML = "SDT không đc rỗng";
+                check = false;
+            }
+            else {
+                var regSDT = /^0[0-9]{9}$/;
+                if (!regSDT.test(sdt)) {
+                    errSDT.innerHTML = "SDT không hợp lệ";
+                    check = false;
+                }
+                else errSDT.innerHTML = "";
+            }
+            // check email
+            if (email == "") {
+                errEmail.innerHTML = "Email không đc rỗng";
+                check = false;
+            }
+            else {
+                var regEmail = /^\w+@\w+(\.\w+){1,2}$/;
+                //-----------
+                if (!regEmail.test(email)) {
+                    errEmail.innerHTML = "Email không hợp lệ";
+                    check = false;
+                }
+                else errEmail.innerHTML = "";
+            }
+            
+            // ------
+            if (check) {
+                alert("Đăng ký thành công");
+                return true;
+            }
+            else return false;
+        }
+    </script>
+</body>
+
+</html>

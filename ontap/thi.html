@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body onclick="loaAnh(),slineShow()">
+    <img id="anh" src="img/p1.png">
+    <button onclick="pre()">pre</button>
+    <button onclick="next()">Next</button>
+    <script>
+      let arrAnh = [];
+      let st1 = 1;
+      let flag = null;
+      function loaAnh(){
+      for(let i = 0; i <= 5; i++){
+        arrAnh[i] = new Image();
+        arrAnh[i].src = "img/p" + i + ".png";
+        console.log(arrAnh);
+        }
+      }
+      function slineShow(){
+        st1++;
+        if(st1 > 5){
+          st1 = 1;
+        }document.getElementById("anh").src = arrAnh[st1].src;
+        flag = setTimeout(slineShow,2000);
+      }
+      function pre(){
+        if(st1 > 1){
+          st1--;
+        }document.getElementById("anh").src = arrAnh[st1].src;
+      }
+      function next(){
+        if(st1 < 5){
+          st1++;
+        }document.getElementById("anh").src = arrAnh[st1].src;
+      }
+      function start(){
+        if(flag == null){
+          slineShow();
+        }
+      }
+      function stop(){
+        if(flag !== null){
+          clearTimeout(flag);
+          flag = null;
+        }
+      }
+    </script>
+</body>
+</html>
